@@ -1,0 +1,50 @@
+body{
+    background-color: teal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.square{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin-top: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid white;
+
+}
+
+img{
+    transition: all .6s;
+}
+img:hover{
+    opacity: .5;
+    transform: translateY(-40px);
+}
+
+.square::before{
+    content: "Check It Out";
+    text-align: center;
+    font-size: small;
+    color: white;
+    padding-top: 5%;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    border-top:1px solid white;
+    position: absolute;
+    z-index: 1;
+    margin-top: 200px;
+    transition: all 0.3s;
+}
+.square:hover::before{
+    
+    transform: translateY(-40px);
+}
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
